@@ -1,0 +1,97 @@
+@import "./app.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.myWhite { @apply text-white}
+.gold { @apply text-[#fcd87f] }
+.myBg { @apply bg-[#6c0022] }
+.myBold { @apply font-bold }
+.flexCenter { @apply flex place-items-center }
+.gridCenter { @apply grid place-items-center }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #6c0022;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "alfont_com_AlFont_com_Tajawal-Medium-2";
+  src: url("font/alfont_com_AlFont_com_Tajawal-Medium-2.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Qatar2022Arabic-Bold";
+  src: url("font/Qatar2022Arabic-Bold.otf");
+  font-style: normal;
+}
+
+.en {
+  font-family: "alfont_com_AlFont_com_Tajawal-Medium-2", fallback, sans-serif;
+}
+
+.ar {
+  font-family: "Qatar2022Arabic-Bold", fallback, sans-serif;
+}
+
+
+.whySec {
+  background: url(../assets/images/mypattern.svg) center center no-repeat;
+  background-size: 100% 100%;
+  height: 260px;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  h2 {
+    z-index: 1;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 30px;;
+  }
+  .p {
+    z-index: 1;
+    font-size: 15px;
+    color: white;
+  }
+}
+
+.whySec:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../assets/icons/whyus.png');
+  background-size: 100% 100%;
+  opacity: .3;
+  width: 100%;
+}
+
+footer {
+  background: url("./images/my.svg") center;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  overflow: hidden;
+}
